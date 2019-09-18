@@ -9,7 +9,7 @@ $color-four: #fff;
 $color-five: #000;
 $color-six: #009432;
 
-$transition: all 1s;
+$transition: background-color 1s;
 
 /*Global*/
 *, *::before, *::after {
@@ -19,7 +19,7 @@ $transition: all 1s;
 body {
   margin: 0;
   font-size: 16px;
-  line-height: 1.7;
+  line-height: 1.7;                          
   font-family: $font-text;
   color: $color-five;
 }
@@ -37,14 +37,16 @@ section {
 .section-title {
   font-size: 48px; 
   font-family: $font-header;
+  color: $color-four;
 }
 
-.section-title-one {
+.section-title-colored {
   color: $color-three;
 }
 
-.section-title-two {
-  color: $color-four;
+.section-subtitle {
+  font-size: 24px;
+  margin: 0 0 12px 0;
 }
 
 .btn {
@@ -228,8 +230,8 @@ a {
 /*Projects*/
 .box-projects {
   flex: 0 0 50%;
+  display: flex;
   min-height: 300px;
-  position: relative;
   margin-bottom: 48px;
   & p:last-of-type {
     font-weight: bold;
@@ -237,7 +239,8 @@ a {
 }
 
 .image-project {
-  position: absolute;
+  flex: 0 0 50%;
+  position: relative;
   max-width: 250px;
   height: 100%; 
   &::after {
@@ -270,16 +273,19 @@ a {
 }
 
 .image-description {
-  padding: 10px 20px 80px 280px;
+  flex: 0 0 50%;
+  padding-left: 40px;
+  flex: display;
+  flex-direction: column;
 }
 
 .btn-five {
+  flex: 0 0 0 25%;
+  align-content: flex-end;
   border: none;
   color: $color-three;
   text-align: left;
   padding-left: 0;
-  position: absolute;
-  top: 260px;
   &:hover {
     color: $color-one;
   }
@@ -302,11 +308,25 @@ a {
   padding: 0;
   & ul {
     padding: 0;
+    margin: 0;
   }
+}
+
+.section-subtitle-smaller {
+  font-size: 20px;
+  padding: 0;
+  margin: 5px 0 0 0;
 }
 
 label {
   text-align: left;
+  position: absolute !important;
+  height: 1px; 
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap; 
 }
 
 input, textarea {
@@ -317,14 +337,18 @@ input, textarea {
   margin: 0 auto;
   width: 100%;
   font-size: 16px;
-  padding: 10px;
-  margin-bottom: 10px;
+  padding: 24px 12px;
   color: inherit; 
   font-family: inherit;
 }
 
 input {
   height: 40px;
+}
+
+::placeholder {
+  font-family: $font-text;
+  color: $color-four;
 }
 
 textarea {
@@ -430,6 +454,14 @@ textarea {
   }
 
   .box-address {
-    margin: 0;
+    margin: 36px 0 0 0;
   }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /*Global*/
+  .row {
+    flex-direction: column;
+  }
+
 }

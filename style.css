@@ -25,14 +25,16 @@ section {
 .section-title {
   font-size: 48px;
   font-family: "Proza Libre", sans-serif;
+  color: #fff;
 }
 
-.section-title-one {
+.section-title-colored {
   color: #227093;
 }
 
-.section-title-two {
-  color: #fff;
+.section-subtitle {
+  font-size: 24px;
+  margin: 0 0 12px 0;
 }
 
 .btn {
@@ -49,7 +51,7 @@ section {
   border: 2px solid;
   background-position: 100% 0;
   background-size: 300%;
-  transition: all 1s;
+  transition: background-color 1s;
 }
 
 .btn:hover {
@@ -221,8 +223,8 @@ a {
 /*Projects*/
 .box-projects {
   flex: 0 0 50%;
+  display: flex;
   min-height: 300px;
-  position: relative;
   margin-bottom: 48px;
 }
 
@@ -231,7 +233,8 @@ a {
 }
 
 .image-project {
-  position: absolute;
+  flex: 0 0 50%;
+  position: relative;
   max-width: 250px;
   height: 100%;
 }
@@ -253,7 +256,7 @@ a {
 .image-project:hover:after {
   top: 0;
   left: 0;
-  transition: all 1s;
+  transition: background-color 1s;
 }
 
 .image-project img {
@@ -263,16 +266,19 @@ a {
 }
 
 .image-description {
-  padding: 10px 20px 80px 280px;
+  flex: 0 0 50%;
+  padding-left: 40px;
+  flex: display;
+  flex-direction: column;
 }
 
 .btn-five {
+  flex: 0 0 0 25%;
+  align-content: flex-end;
   border: none;
   color: #227093;
   text-align: left;
   padding-left: 0;
-  position: absolute;
-  top: 260px;
 }
 
 .btn-five:hover {
@@ -298,10 +304,25 @@ a {
 
 .box-address ul {
   padding: 0;
+  margin: 0;
+}
+
+.section-subtitle-smaller {
+  font-size: 20px;
+  padding: 0;
+  margin: 5px 0 0 0;
 }
 
 label {
   text-align: left;
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
 }
 
 input, textarea {
@@ -312,14 +333,18 @@ input, textarea {
   margin: 0 auto;
   width: 100%;
   font-size: 16px;
-  padding: 10px;
-  margin-bottom: 10px;
+  padding: 24px 12px;
   color: inherit;
   font-family: inherit;
 }
 
 input {
   height: 40px;
+}
+
+::placeholder {
+  font-family: "Open Sans", sans-serif;
+  color: #fff;
 }
 
 textarea {
@@ -355,7 +380,7 @@ textarea {
   border-radius: 50%;
   background-color: #95a5a6;
   color: #fff;
-  transition: all 1s;
+  transition: background-color 1s;
 }
 
 .footer i:hover {
@@ -413,6 +438,13 @@ textarea {
     margin-left: 0px;
   }
   .box-address {
-    margin: 0;
+    margin: 36px 0 0 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /*Global*/
+  .row {
+    flex-direction: column;
   }
 }
