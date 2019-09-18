@@ -1,0 +1,435 @@
+/* Variables */
+$font-header: 'Proza Libre', sans-serif;
+$font-text: 'Open Sans', sans-serif;
+
+$color-one: #b33939;
+$color-two: #95a5a6;
+$color-three: #227093;
+$color-four: #fff;
+$color-five: #000;
+$color-six: #009432;
+
+$transition: all 1s;
+
+/*Global*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.7;
+  font-family: $font-text;
+  color: $color-five;
+}
+
+.container {
+  max-width: 1140px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+section {
+  padding: 96px 0;
+}
+
+.section-title {
+  font-size: 48px; 
+  font-family: $font-header;
+}
+
+.section-title-one {
+  color: $color-three;
+}
+
+.section-title-two {
+  color: $color-four;
+}
+
+.btn {
+  display: inline-block;
+  min-width: 160px;
+  margin: 24px auto 0 auto;
+  padding: 16px;
+  border-radius: 5px;
+  font-family: $font-text;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border: 2px solid;
+  background-position: 100% 0;
+  background-size: 300%;
+  transition: $transition;
+  &:hover {
+    background-position: 0 100%;
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.box {
+  position: relative;
+  text-align: left;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Navigation */
+.navigation {
+  padding: 12px 0;
+  background-color: $color-one;
+}
+
+.navigation ul {
+  padding: 0;
+  margin: 0;
+}
+
+.navigation ul li {
+  display: inline-block;
+  margin: 0 36px 0 0;
+  position: relative;
+}
+
+.navigation a {
+  color: $color-four;
+  &:hover {
+    color: $color-five;
+  }
+}
+
+.navigation ul ul li {
+  display: block;
+  margin: 0 0 12px 0;
+}
+
+.navigation li ul  {
+  display: none;
+  position: absolute;
+  background-color: $color-three;
+  left: 50%; 
+  transform: translateX(-50%);
+  padding: 12px 0 0 0;
+}
+
+.navigation li:hover ul {
+  display: block;
+  text-align: center;
+  z-index: 1;
+}
+
+.navigation li ul li {
+  display: block;
+  padding: 0 24px;
+}
+
+/*Splash*/
+.splash {
+  background-color: $color-one;
+  display: flex;
+  color: $color-four;
+  min-height: 500px;
+}
+
+.splash-inner {
+  margin: auto;
+  max-width: 70%;
+  text-align: center;
+}
+
+.page-title {
+  margin: 0;
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 1.2;
+  font-family: $font-header;
+  & span {
+    color: $color-five;
+  }
+}
+
+.page-subtitle {
+  margin: 24px 0;
+  font-weight: 400;
+  font-size: 20px;
+  font-family: $font-header;
+}
+
+.btn-one {
+  border-color: $color-four;
+  color: $color-four;
+  background-image: linear-gradient(90deg, $color-three 50%, transparent 50%);
+  &:hover {
+    color: $color-four;
+  }
+}
+
+/*Services*/
+.box-services {
+  flex: 0 0 33.333%;
+  padding: 0 30px;
+  & p:first-of-type {
+    font-weight: bold;
+  }
+}
+
+.number {
+  position: absolute;
+  font-size: 144px;
+  line-height: 1;
+  font-weight: bold;
+  color: $color-three;
+  font-family: $font-header;
+  opacity: 0.2;
+  top: 0px;
+  left: 20px;
+  z-index: 0;
+}
+
+.btn-two, .btn-three, .btn-four {
+  position: absolute;
+  top: 240px;
+}
+
+.btn-two:hover, .btn-three:hover, .btn-four:hover {
+  color: $color-four;
+}
+
+.btn-two {
+  border-color: $color-one;
+  color: $color-one;
+  background-image: linear-gradient(90deg, $color-one 50%, transparent 50%);
+}
+
+.btn-three {
+  border-color: $color-three;
+  color: $color-three;
+  background-image: linear-gradient(90deg, $color-three 50%, transparent 50%);
+}
+
+.btn-four {
+  border-color: $color-five;
+  color: $color-five;
+  background-image: linear-gradient(90deg, $color-five 50%, transparent 50%); 
+}
+
+/*Projects*/
+.box-projects {
+  flex: 0 0 50%;
+  min-height: 300px;
+  position: relative;
+  margin-bottom: 48px;
+  & p:last-of-type {
+    font-weight: bold;
+  }
+}
+
+.image-project {
+  position: absolute;
+  max-width: 250px;
+  height: 100%; 
+  &::after {
+    clear: both;
+    content: "";
+    display: table;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+    background-color: $color-two;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 1;
+  }
+}
+
+.image-project:hover {
+  &:after {
+    top: 0;
+    left: 0;
+    transition: $transition;
+  }
+}
+
+.image-project img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-description {
+  padding: 10px 20px 80px 280px;
+}
+
+.btn-five {
+  border: none;
+  color: $color-three;
+  text-align: left;
+  padding-left: 0;
+  position: absolute;
+  top: 260px;
+  &:hover {
+    color: $color-one;
+  }
+}
+
+/*Contact*/
+.contact {
+  background-color: $color-one;
+  color: $color-four;
+}
+
+.box-form {
+  flex: 2;
+  margin-left: 30px;
+}
+
+.box-address {
+  flex: 1;
+  margin-left: 96px;
+  padding: 0;
+  & ul {
+    padding: 0;
+  }
+}
+
+label {
+  text-align: left;
+}
+
+input, textarea {
+  display: block;
+  background-color: inherit;
+  border: none;
+  border-bottom: 3px solid $color-four; 
+  margin: 0 auto;
+  width: 100%;
+  font-size: 16px;
+  padding: 10px;
+  margin-bottom: 10px;
+  color: inherit; 
+  font-family: inherit;
+}
+
+input {
+  height: 40px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+/*Footer*/
+.footer {
+  margin-top: 48px;
+  margin-bottom: 48px;
+}
+
+.footer ul {
+  text-align: center;
+  padding: 0;
+}
+
+.footer li {
+  display: inline-block;
+  padding-right: 10px;
+}
+
+.footer a {
+  font-size: 0;
+}
+
+.footer i {
+  font-size: 30px;
+  text-align: center;
+  padding: 15px;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background-color: $color-two;
+  color: $color-four;
+  transition: $transition;
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+/* Media */
+@media (max-width: 767px) {
+  
+  /*Global*/
+  .row {
+    flex-direction: column;
+  }
+
+  section {
+    margin: 36px auto;
+    padding: 0;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+
+  /*Navigation*/
+  .navigation ul li {
+    margin-right: 60px;
+  }
+
+  /*Splash*/
+  .page-title {
+    font-size: 24px;
+  }
+
+  /*Services*/
+  .btn-two, .btn-three, .btn-four {
+    position: relative;
+    top: 0;
+  }
+
+  .box-services {
+    margin-bottom: 20px;
+  }
+
+  /*Projects*/
+  .image-project {
+    max-width: 100%;
+    height: 150px;
+    position: relative;
+  }
+  
+  .image-description {
+    padding: 10px;
+  }
+
+  .btn-five {
+    position: relative;
+    top: 0;
+    margin: 0;
+  }
+
+  /*Contact*/
+  .contact {
+    padding: 36px 0;
+  }
+
+  .box-form {
+    margin-left: 0px;
+  }
+
+  .box-address {
+    margin: 0;
+  }
+}
