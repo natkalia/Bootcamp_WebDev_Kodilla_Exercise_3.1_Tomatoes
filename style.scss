@@ -9,7 +9,7 @@ $color-four: #fff;
 $color-five: #000;
 $color-six: #009432;
 
-$transition: background-color 1s;
+$transition: all 1s;
 
 /*Global*/
 *, *::before, *::after {
@@ -31,7 +31,7 @@ body {
 }
 
 section {
-  padding: 96px 0;
+  margin: 96px 0;
 }
 
 .section-title {
@@ -142,7 +142,7 @@ a {
   background-color: $color-one;
   display: flex;
   color: $color-four;
-  min-height: 500px;
+  height: 100vh;
 }
 
 .splash-inner {
@@ -181,6 +181,9 @@ a {
 /*Services*/
 .box-services {
   flex: 0 0 33.333%;
+  display: flex;
+  align-items: baseline;
+  flex-direction: column;
   padding: 0 30px;
   & p:first-of-type {
     font-weight: bold;
@@ -201,8 +204,8 @@ a {
 }
 
 .btn-two, .btn-three, .btn-four {
-  position: absolute;
-  top: 240px;
+  flex: 0 0 auto;
+  margin: auto 0 24px 0;
 }
 
 .btn-two:hover, .btn-three:hover, .btn-four:hover {
@@ -240,7 +243,7 @@ a {
 
 .image-project {
   flex: 0 0 50%;
-  position: relative;
+  position: relative; 
   max-width: 250px;
   height: 100%; 
   &::after {
@@ -274,18 +277,18 @@ a {
 
 .image-description {
   flex: 0 0 50%;
-  padding-left: 40px;
-  flex: display;
+  display: flex;
   flex-direction: column;
+  padding: 0 40px;
 }
 
 .btn-five {
-  flex: 0 0 0 25%;
-  align-content: flex-end;
+  flex: 0 0 auto;
   border: none;
   color: $color-three;
   text-align: left;
   padding-left: 0;
+  margin: auto 0 0 0;
   &:hover {
     color: $color-one;
   }
@@ -295,6 +298,8 @@ a {
 .contact {
   background-color: $color-one;
   color: $color-four;
+  padding: 96px 0;
+  margin: 0;
 }
 
 .box-form {
@@ -409,7 +414,7 @@ textarea {
 
   /*Navigation*/
   .navigation ul li {
-    margin-right: 60px;
+    margin-right: 6px;
   }
 
   /*Splash*/
@@ -418,35 +423,39 @@ textarea {
   }
 
   /*Services*/
-  .btn-two, .btn-three, .btn-four {
-    position: relative;
-    top: 0;
-  }
-
   .box-services {
-    margin-bottom: 20px;
+    margin: 0 auto;
+    padding: 0;
   }
 
+  .services p {
+    margin: 12px 0;
+  }
+  
   /*Projects*/
+  .box-projects {
+    flex-direction: column;
+    margin: 0 auto;
+  }
+
   .image-project {
+    flex-direction: column;
     max-width: 100%;
-    height: 150px;
-    position: relative;
   }
   
   .image-description {
-    padding: 10px;
+    margin: 20px 0 0 0;
+    padding: 0;
   }
 
-  .btn-five {
-    position: relative;
-    top: 0;
-    margin: 0;
+  .projects p {
+    margin: 6px 0;
   }
 
   /*Contact*/
   .contact {
-    padding: 36px 0;
+    padding: 24px 0;
+    margin: 0 auto;
   }
 
   .box-form {
@@ -456,6 +465,11 @@ textarea {
   .box-address {
     margin: 36px 0 0 0;
   }
+
+  /*Footer*/
+  .footer {
+    margin: 24px 0;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -464,4 +478,70 @@ textarea {
     flex-direction: column;
   }
 
+  section {
+    margin: 36px auto;
+    padding: 0;
+  }
+
+  .section-title {
+    font-size: 36px;
+  }
+
+  /*Navigation*/
+  .navigation ul li {
+    margin-right: 6px;
+  }
+
+  /*Splash*/
+  .page-title {
+    font-size: 36px;
+  }
+ 
+  /*Services*/
+  .box-services {
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .services p {
+    margin: 12px 0;
+  }
+
+  /*Projects*/
+  .box-projects {
+    flex-direction: column;
+    margin: 0 auto;
+  }
+
+  .image-project {
+    flex-direction: column;
+    max-width: 100%;
+  }
+  
+  .image-description {
+    margin: 20px 0 0 0;
+    padding: 0;
+  }
+
+  .projects p {
+    margin: 6px 0;
+  }
+
+  .contact {
+    padding: 24px 0;
+    margin: 0 auto;
+  }
+
+  .box-form {
+    margin-left: 0px;
+  }
+
+  .box-address {
+    margin: 36px 0 0 0;
+  }
+
+  /*Footer*/
+  .footer {
+    margin: 24px 0;
+  }
 }
