@@ -3,7 +3,7 @@ Exercise for Web Developer Bootcamp in Kodilla
 
 ## Teaser
 
-![tomatoes](https://user-images.githubusercontent.com/49140572/73441587-8327ed80-4353-11ea-84c9-190a2fefc947.gif)
+![tomatoes-gif](https://user-images.githubusercontent.com/49140572/73442349-f9791f80-4354-11ea-9cee-3db30e19b4d3.gif)
 
 ## Setup
 
