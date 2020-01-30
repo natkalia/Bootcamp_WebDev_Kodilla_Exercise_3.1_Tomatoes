@@ -1,5 +1,5 @@
 # Crazy Tomatoes :tomato:
-Landing page created as exercise for Web Developer Bootcamp in Kodilla (Module 3.1)
+Landing page created as exercise for Web Developer Bootcamp in Kodilla (Module 2.8)
 
 ## Teaser
 
