@@ -13,7 +13,7 @@ Landing page created as exercise for Web Developer Bootcamp in Kodilla (Module 2
 
 You can also **download a zip archive** or a **clone repository** from github page:
 ```bash
-git clone https://github.com/natkalia/tomatoes-kodilla-3.1.git
+git clone https://github.com/natkalia/tomatoes-kodilla-2.8.git
 ```
 As it is a static page, just **open the index.html** file in your favourite web browser.
 	
