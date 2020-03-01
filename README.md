@@ -7,9 +7,9 @@ Landing page created as exercise for Web Developer Bootcamp in Kodilla (Module 2
 
 ## Setup
 
-**Live:** [https://natkalia.github.io/tomatoes-kodilla-3.1](https://natkalia.github.io/tomatoes-kodilla-3.1)
+**Live:** [https://natkalia.github.io/tomatoes-kodilla-2.8](https://natkalia.github.io/tomatoes-kodilla-2.8)
 
-**Repository**: https://github.com/natkalia/tomatoes-kodilla-3.1
+**Repository**: https://github.com/natkalia/tomatoes-kodilla-2.8
 
 You can also **download a zip archive** or a **clone repository** from github page:
 ```bash
